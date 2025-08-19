@@ -60,10 +60,18 @@ main {
 }
 
 /* Search Bar */
+.search-bar-container {
+  display: inline;
+}
+
 .floating-form {
   background-color: white;
   padding: 16px;
   border-radius: 5px;
+
+  position: sticky;
+  top: 10px;
+  
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -108,6 +116,8 @@ main {
 
   user-select: none;
   pointer-events: none;
+
+  transition: 150ms all ease-in-out;
 }
 
 .search-form .form-group input:focus-visible ~ label,
