@@ -54,6 +54,18 @@ class Clubs {
   static getAll() {
     return clubs;
   }
+
+  static searchClub(query) {
+    return clubs.filter((club) => {
+      const lowerCaseClubName = (club.strTeam || '-').toLowerCase();
+      const jammedClubName = lowerCaseClubName.replace(/\s/g, '');
+
+      const lowerCaseQuery = query.toLowerCase();
+      const jammedQuery = lowerCaseQuery.replace(/\s/g, '');
+
+      return jammedClubName.indexOf(jammedQuery) !== -1;
+    })
+  }
 }
 
 export default Clubs;
