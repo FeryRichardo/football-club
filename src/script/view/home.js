@@ -64,6 +64,8 @@ const searchFormElement = document.querySelector('#searchForm');
   };
 
   showSportClub();
+
+  searchFormElement.addEventListener('submit', onSearchHandler);
 };
 
 export default home;
