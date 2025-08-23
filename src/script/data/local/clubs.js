@@ -57,11 +57,11 @@ class Clubs {
 
   static searchClub(query) {
     return clubs.filter((club) => {
-      const lowerCaseClubName = (club.strTeam || '-').toLowerCase();
-      const jammedClubName = lowerCaseClubName.replace(/\s/g, '');
+      const loweredCaseClubName = (club.strTeam || '-').toLowerCase();
+      const jammedClubName = loweredCaseClubName.replace(/\s/g, '');
 
-      const lowerCaseQuery = query.toLowerCase();
-      const jammedQuery = lowerCaseQuery.replace(/\s/g, '');
+      const loweredCaseQuery = query.toLowerCase();
+      const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
 
       return jammedClubName.indexOf(jammedQuery) !== -1;
     })

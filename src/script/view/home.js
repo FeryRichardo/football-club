@@ -5,6 +5,7 @@ const home = () => {
 const searchFormElement = document.querySelector('#searchForm');
 
   const clubListContainerElement = document.querySelector('#clubListContainer');
+  const clubQueryWaitingElement = clubListContainerElement.querySelector('.query-waiting');
   const clubLoadingElement = clubListContainerElement.querySelector('.search-loading');
   const clubListElement = clubListContainerElement.querySelector('.club-list');
   const listElement = clubListElement.querySelector('.list');
@@ -48,6 +49,13 @@ const searchFormElement = document.querySelector('#searchForm');
 
     listElement.innerHTML = clubItems.join('');
   };
+  
+  const showClubList = () => {
+    Array.from(clubListContainerElement.children).forEach((element) => {
+      Utils.hideElement(element);
+    });
+    Utils.showElement(clubListElement);
+  };
 
   const showLoading = () => {
     Array.from(clubListContainerElement.children).forEach((element) => {
@@ -56,16 +64,16 @@ const searchFormElement = document.querySelector('#searchForm');
     Utils.showElement(clubLoadingElement);
   };
 
-  const showClubList = () => {
+
+  const showQueryWaiting = () => {
     Array.from(clubListContainerElement.children).forEach((element) => {
       Utils.hideElement(element);
     });
-    Utils.showElement(clubListElement);
-  };
-
-  showSportClub();
+    Utils.showElement(clubQueryWaitingElement)
+  }
 
   searchFormElement.addEventListener('submit', onSearchHandler);
+  showQueryWaiting();
 };
 
 export default home;
