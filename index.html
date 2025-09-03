@@ -13,9 +13,7 @@
   </head>
   <body>
     <header>
-      <div class="app-bar">
-        <h1 class="brand-name">Sport Club Finder</h1>
-      </div>
+      <app-bar></app-bar>
     </header>
 
     <main>
@@ -41,18 +39,14 @@
             <div class="placeholder query-waiting">Waiting for search keyword</div>
             <div class="placeholder search-loading">Loading</div>
 
-            <div id="clubList" class="club-list">
-              <div class="list"></div>
-            </div>
+            <club-list></club-list>
           </div>
         </section>
       </div>
     </main>
 
     <footer>
-      <div class="container">
-        <div class="main-footer">Club Finder &copy; 2023</div>
-      </div>
+      <footer-bar></footer-bar>
     </footer>
 
     <script type="module" src="/src/app.js"></script>
