@@ -11,6 +11,9 @@ Aplikasi ini dibangun dengan **HTML, CSS, dan JavaScript** menggunakan konsep mo
 - 📖 Menampilkan deskripsi singkat klub
 - 🎨 Tampilan modern dengan efek **floating search bar**, card rapi, dan responsive
 
+
+![alt text](image.png)
+
 ---
 
 ## 📂 Struktur Folder
